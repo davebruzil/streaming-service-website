@@ -1,0 +1,322 @@
+/* Netflix-style Custom Styles */
+
+:root {
+    --netflix-red: #e50914;
+    --netflix-black: #000000;
+    --netflix-dark-gray: #141414;
+    --netflix-gray: #333333;
+    --netflix-light-gray: #757575;
+    --netflix-white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--netflix-black);
+    color: var(--netflix-white);
+    line-height: 1.6;
+}
+
+/* Login Page Styles */
+.login-container {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+                url('https://assets.nflxext.com/ffe/siteui/vlv3/f85718e8-fc6d-4954-bca0-f5eaf78e0842/ea44b42b-ba19-4f35-ad27-45090e34a897/IL-en-20230918-popsignuptwoweeks-perspective_alpha_website_large.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.login-form {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 60px 68px 40px;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 450px;
+    margin: 20px;
+}
+
+.login-form h1 {
+    color: var(--netflix-white);
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 28px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-control {
+    width: 100%;
+    height: 50px;
+    padding: 16px 20px 0;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    color: var(--netflix-white);
+    font-size: 16px;
+}
+
+.form-control:focus {
+    background-color: #454545;
+    outline: none;
+}
+
+.btn-netflix {
+    width: 100%;
+    background-color: var(--netflix-red);
+    color: var(--netflix-white);
+    border: none;
+    border-radius: 4px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-netflix:hover {
+    background-color: #f40612;
+}
+
+.netflix-logo {
+    width: 167px;
+    height: 45px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: var(--netflix-red);
+    font-size: 32px;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+/* Profile Selection Styles */
+.profile-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--netflix-dark-gray);
+}
+
+.profile-title {
+    font-size: 3.5vw;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--netflix-white);
+}
+
+.profiles-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.profile-item {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.profile-item:hover {
+    transform: scale(1.05);
+}
+
+.profile-avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: var(--netflix-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+}
+
+.profile-name {
+    color: var(--netflix-light-gray);
+    font-size: 16px;
+    max-width: 140px;
+}
+
+.add-profile {
+    background-color: transparent;
+    border: 2px dashed var(--netflix-light-gray);
+    color: var(--netflix-light-gray);
+    font-size: 72px;
+}
+
+.manage-profiles-btn {
+    margin-top: 40px;
+    background-color: transparent;
+    color: var(--netflix-light-gray);
+    border: 1px solid var(--netflix-light-gray);
+    padding: 8px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.manage-profiles-btn:hover {
+    color: var(--netflix-white);
+    border-color: var(--netflix-white);
+}
+
+/* Main Menu Styles */
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7) 10%, transparent);
+    z-index: 1000;
+    padding: 20px 4%;
+    transition: background-color 0.4s;
+}
+
+/* Hero Section Styles */
+.hero-section {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.hero-buttons .btn {
+    font-weight: 600;
+    text-transform: none;
+    min-width: 110px;
+}
+
+/* Movie Card Styles */
+.movie-card {
+    background-color: #333 !important;
+    border-radius: 4px !important;
+    height: 120px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: white !important;
+    cursor: pointer !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    font-weight: 500;
+    border: 1px solid #444;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border-color: #666;
+}
+
+.main-header.scrolled {
+    background-color: var(--netflix-dark-gray);
+}
+
+.navbar-netflix {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    color: var(--netflix-red);
+    font-size: 28px;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-link {
+    color: var(--netflix-white);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.4s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--netflix-light-gray);
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-icon,
+.notifications-icon,
+.profile-icon {
+    color: var(--netflix-white);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.main-content {
+    margin-top: 70px;
+    padding: 40px 4%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-form {
+        padding: 40px 28px;
+    }
+    
+    .profile-title {
+        font-size: 24px;
+    }
+    
+    .profiles-list {
+        gap: 20px;
+    }
+    
+    .profile-avatar {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .navbar-nav {
+        display: none;
+    }
+    
+    .netflix-logo {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-form {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    .profile-avatar {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .add-profile {
+        font-size: 48px;
+    }
+}

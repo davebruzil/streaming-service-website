@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# Temporary / Office lock files
+~$*.docx
+
+# Logs
+*.log
+
+# Node (not used now, but future-proof)
+node_modules/
+dist/
+
+# IDE
+.idea/
+.vscode/
