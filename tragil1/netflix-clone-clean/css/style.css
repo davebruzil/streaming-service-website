@@ -62,7 +62,12 @@ body {
     background-color: #333;
     border: none;
     border-radius: 4px;
-    color: var(--netflix-white);
+    color: #8c8c8c;
+    font-size: 16px;
+}
+
+.form-control::placeholder {
+    color: #8c8c8c;
     font-size: 16px;
 }
 
@@ -88,16 +93,84 @@ body {
     background-color: #f40612;
 }
 
+/* Login Form Links and Text Styling */
+.help-link {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.help-link:hover {
+    color: var(--netflix-white);
+    text-decoration: underline;
+}
+
+.new-to-netflix {
+    color: #737373;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.signup-link {
+    color: var(--netflix-white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.signup-link:hover {
+    color: #e5e5e5;
+    text-decoration: underline;
+}
+
+.captcha-text {
+    color: #737373;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.learn-more-link {
+    color: #0071eb;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.learn-more-link:hover {
+    color: #0056d3;
+    text-decoration: underline;
+}
+
+/* Logo Styling with Responsive Design */
 .netflix-logo {
-    width: 167px;
-    height: 45px;
     position: absolute;
     top: 20px;
     left: 20px;
-    color: var(--netflix-red);
-    font-size: 32px;
-    font-weight: 900;
     text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.netflix-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Login Page Logo - Primary branding context */
+.logo-login {
+    height: 72px;
+    width: auto;
+    max-width: 200px;
+}
+
+/* Navigation Logo - Secondary context */
+.logo-nav {
+    height: 52px;
+    width: auto;
+    max-width: 150px;
+    transition: opacity 0.2s ease;
+}
+
+.logo-nav:hover {
+    opacity: 0.8;
 }
 
 /* Profile Selection Styles */
@@ -182,7 +255,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.7) 10%, transparent);
+    background: linear-gradient(to bottom, #000000 0%, #000000 70%, rgba(0,0,0,0.8) 100%);
     z-index: 1000;
     padding: 20px 4%;
     transition: background-color 0.4s;
@@ -278,6 +351,17 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1199px) {
+    /* Tablet sizes */
+    .logo-login {
+        height: 60px;
+    }
+    
+    .logo-nav {
+        height: 48px;
+    }
+}
+
 @media (max-width: 768px) {
     .login-form {
         padding: 40px 28px;
@@ -300,8 +384,20 @@ body {
         display: none;
     }
     
+    /* Mobile logo sizing */
+    .logo-login {
+        height: 56px;
+        max-width: 160px;
+    }
+    
+    .logo-nav {
+        height: 44px;
+        max-width: 120px;
+    }
+    
     .netflix-logo {
-        font-size: 24px;
+        top: 15px;
+        left: 15px;
     }
 }
 
@@ -318,5 +414,21 @@ body {
     
     .add-profile {
         font-size: 48px;
+    }
+    
+    /* Extra small screens - ensure logos remain visible */
+    .logo-login {
+        height: 48px;
+        max-width: 140px;
+    }
+    
+    .logo-nav {
+        height: 40px;
+        max-width: 110px;
+    }
+    
+    .netflix-logo {
+        top: 12px;
+        left: 12px;
     }
 }
