@@ -76,6 +76,18 @@ body {
     outline: none;
 }
 
+.form-control.error {
+    border-bottom: 2px solid #e87c03;
+}
+
+.error-message {
+    color: #e87c03;
+    font-size: 13px;
+    margin-top: 6px;
+    min-height: 18px;
+    display: block;
+}
+
 .btn-netflix {
     width: 100%;
     background-color: var(--netflix-red);
